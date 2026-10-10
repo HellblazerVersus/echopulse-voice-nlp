@@ -22,7 +22,7 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Codecademy-style global CSS overrides (user-requested)
+# Codecademy-style Light Mode CSS overrides
 # ---------------------------------------------------------
 st.html("""
 <style>
@@ -33,16 +33,22 @@ st.html("""
       font-family: 'JetBrains Mono', monospace !important;
   }
 
-  /* ── Codecademy deep navy canvas ── */
-  .stApp { background-color: #10162F !important; }
-  [data-testid="stSidebar"] { background-color: #0D1226 !important; border-right: 1px solid #2A3060 !important; }
-  [data-testid="stHeader"] { background-color: #10162F !important; border-bottom: 1px solid #2A3060 !important; }
+  /* ── Light canvas ── */
+  .stApp { background-color: #FFFFFF !important; }
+  [data-testid="stSidebar"] {
+      background-color: #F4F0FA !important;
+      border-right: 1px solid #D6CCF0 !important;
+  }
+  [data-testid="stHeader"] {
+      background-color: #FFFFFF !important;
+      border-bottom: 1px solid #D6CCF0 !important;
+  }
 
-  /* ── Primary button — glowing purple (Codecademy CTA style) ── */
+  /* ── Primary button — solid purple with lift shadow ── */
   button[kind="primary"], [data-testid="stBaseButton-primary"] {
       background: linear-gradient(135deg, #7B2FBE 0%, #5A1F9A 100%) !important;
       border: none !important;
-      box-shadow: 0 0 16px rgba(123, 47, 190, 0.55) !important;
+      box-shadow: 0 2px 12px rgba(123, 47, 190, 0.35) !important;
       color: #FFFFFF !important;
       font-family: 'JetBrains Mono', monospace !important;
       font-weight: 600 !important;
@@ -50,64 +56,65 @@ st.html("""
       transition: box-shadow 0.2s ease, transform 0.15s ease !important;
   }
   button[kind="primary"]:hover, [data-testid="stBaseButton-primary"]:hover {
-      box-shadow: 0 0 28px rgba(123, 47, 190, 0.85) !important;
+      box-shadow: 0 4px 20px rgba(123, 47, 190, 0.55) !important;
       transform: translateY(-1px) !important;
   }
 
-  /* ── Secondary button — outlined teal ── */
+  /* ── Secondary button — outlined purple ── */
   button[kind="secondary"], [data-testid="stBaseButton-secondary"] {
       background: transparent !important;
-      border: 1.5px solid #3CE8CA !important;
-      color: #3CE8CA !important;
+      border: 1.5px solid #7B2FBE !important;
+      color: #7B2FBE !important;
       font-family: 'JetBrains Mono', monospace !important;
       font-weight: 500 !important;
   }
   button[kind="secondary"]:hover, [data-testid="stBaseButton-secondary"]:hover {
-      background: rgba(60, 232, 202, 0.1) !important;
+      background: rgba(123, 47, 190, 0.07) !important;
   }
 
-  /* ── Teal links ── */
-  a, a:visited { color: #3CE8CA !important; text-decoration: none !important; }
-  a:hover { text-shadow: 0 0 8px rgba(60, 232, 202, 0.6) !important; }
+  /* ── Links — purple ── */
+  a, a:visited { color: #7B2FBE !important; text-decoration: none !important; }
+  a:hover { text-decoration: underline !important; color: #5A1F9A !important; }
 
-  /* ── Card containers — subtle purple border glow on hover ── */
+  /* ── Cards — white with lavender border, purple glow on hover ── */
   [data-testid="stVerticalBlockBorderWrapper"] {
-      border: 1px solid #2A3060 !important;
+      border: 1px solid #D6CCF0 !important;
       border-radius: 8px !important;
-      background-color: #1A2040 !important;
+      background-color: #FAFAFA !important;
+      box-shadow: 0 1px 4px rgba(123, 47, 190, 0.06) !important;
       transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
   }
   [data-testid="stVerticalBlockBorderWrapper"]:hover {
       border-color: #7B2FBE !important;
-      box-shadow: 0 0 14px rgba(123, 47, 190, 0.28) !important;
+      box-shadow: 0 4px 16px rgba(123, 47, 190, 0.18) !important;
   }
 
-  /* ── Metric cards ── */
+  /* ── Metric labels — purple uppercase ── */
   [data-testid="stMetricLabel"] {
-      color: #3CE8CA !important;
+      color: #7B2FBE !important;
       font-size: 11px !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
   }
-  [data-testid="stMetricValue"] { color: #FFFFFF !important; font-weight: 700 !important; }
+  [data-testid="stMetricValue"] { color: #1A1A2E !important; font-weight: 700 !important; }
   [data-testid="stMetricDelta"] { font-size: 12px !important; }
 
   /* ── Tabs — active tab underlined in purple ── */
   [data-testid="stTabs"] button {
-      color: #8892B0 !important;
+      color: #5C5F7A !important;
       font-family: 'JetBrains Mono', monospace !important;
       font-weight: 500 !important;
       border-bottom: 2px solid transparent !important;
       transition: color 0.2s, border-color 0.2s !important;
   }
   [data-testid="stTabs"] button[aria-selected="true"] {
-      color: #FFFFFF !important;
+      color: #1A1A2E !important;
       border-bottom: 2px solid #7B2FBE !important;
   }
 
   /* ── Sidebar title ── */
   [data-testid="stSidebar"] h1 {
-      color: #FFFFFF !important;
+      color: #1A1A2E !important;
       font-size: 20px !important;
       font-weight: 700 !important;
       letter-spacing: 0.04em !important;
@@ -116,12 +123,12 @@ st.html("""
   }
 
   /* ── Dividers ── */
-  hr { border-color: #2A3060 !important; }
+  hr { border-color: #D6CCF0 !important; }
 
-  /* ── Dataframe headers — teal uppercase ── */
+  /* ── Dataframe headers — purple uppercase on lavender ── */
   [data-testid="stDataFrame"] thead th {
-      background-color: #12183A !important;
-      color: #3CE8CA !important;
+      background-color: #EDE8F5 !important;
+      color: #7B2FBE !important;
       font-family: 'JetBrains Mono', monospace !important;
       font-size: 12px !important;
       letter-spacing: 0.05em !important;
@@ -130,15 +137,15 @@ st.html("""
 
   /* ── Expander ── */
   [data-testid="stExpander"] summary {
-      color: #9B6DFF !important;
+      color: #7B2FBE !important;
       font-family: 'JetBrains Mono', monospace !important;
       font-weight: 600 !important;
   }
 
   /* ── Custom scrollbar ── */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
-  ::-webkit-scrollbar-track { background: #10162F; }
-  ::-webkit-scrollbar-thumb { background: #2A3060; border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: #F4F0FA; }
+  ::-webkit-scrollbar-thumb { background: #D6CCF0; border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: #7B2FBE; }
 </style>
 """)
