@@ -1,0 +1,51 @@
+# Codecademy-inspired theme — deep navy, vivid purple, teal accents, JetBrains Mono UI
+
+[theme]
+base = "dark"
+primaryColor = "#7B2FBE"                # Codecademy vivid purple
+backgroundColor = "#10162F"             # Deep navy (Codecademy canvas)
+secondaryBackgroundColor = "#1A2040"    # Elevated card surface
+codeBackgroundColor = "#12183A"
+textColor = "#FFFFFF"
+linkColor = "#3CE8CA"                   # Codecademy teal/mint
+borderColor = "#2A3060"
+codeTextColor = "#3CE8CA"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "6px"
+buttonRadius = "6px"
+
+# JetBrains Mono for ALL UI text — body, headings, and code
+font = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+headingFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseFontSize = 14
+headingFontSizes = ["28px", "22px", "18px", "16px", "14px", "12px"]
+headingFontWeights = [700, 700, 600, 600, 500, 500]
+linkUnderline = false
+
+# Semantic palette (Codecademy-aligned)
+greenColor  = "#3CE8CA"   # Teal mint — positive/success
+redColor    = "#FF5C7C"   # Hot pink-red — negative/loss
+yellowColor = "#FFD166"   # Amber — warning
+orangeColor = "#FF9A3C"   # Orange — alert
+blueColor   = "#1CB0F6"   # Duolingo/Codecademy bright blue
+violetColor = "#9B6DFF"   # Soft violet — accent
+grayColor   = "#8892B0"   # Muted slate text
+
+# Chart palette: purple → teal → blue → red → amber sequence
+chartCategoricalColors = [
+    "#7B2FBE",
+    "#3CE8CA",
+    "#1CB0F6",
+    "#FF5C7C",
+    "#FFD166",
+    "#9B6DFF",
+    "#FF9A3C",
+    "#8892B0",
+]
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true

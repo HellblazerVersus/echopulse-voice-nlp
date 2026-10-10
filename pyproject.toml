@@ -1,0 +1,15 @@
+[project]
+name = "echopulse-voice-nlp"
+version = "0.1.0"
+description = "EchoPulse AI: Executive Voice & NLP Analytics Dashboard built with Wispr Flow"
+readme = "README.md"
+requires-python = ">=3.10, <3.14"
+dependencies = [
+    "altair>=5.0.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "streamlit>=1.40.0",
+]
+
+[tool.uv]
+package = false
